@@ -169,14 +169,13 @@
                 console.log(`items = ${itemSelected} `);
                 items = itemSelected.join();
 				console.log(itemSelected);
-				                for (let i = 0; i < itemSelected.length; i++){
-                    if(itemSelected[i] == (3||5||11||13)){
+                    if(items == '3,5,11,13'){
                         document.getElementById("outcome").innerHTML = "<p>Correct</p>";
                     } else{
 					document.getElementById("outcome").innerHTML = "<p>Incorrect</p>";
 					}
 					itemSelected = [];
-            }}
+            }
             </script>
 </body>
 </html>
