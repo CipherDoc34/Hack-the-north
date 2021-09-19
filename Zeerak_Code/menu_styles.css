@@ -2,7 +2,28 @@
     background-color: black;
 }
 
+a{
+    text-decoration: none;
+}
+
+p{
+    color: white;
+    text-decoration: none;
+    /* rid of underline */
+}
+
 h1{
+    font-family: 'Titillium Web', sans-serif;
     text-align: center;
     color:white;
+}
+
+.row{
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.col{
+    /* justify-content: center; */
+    padding-top: 1rem;
 }
