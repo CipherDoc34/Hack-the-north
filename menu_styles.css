@@ -2,13 +2,29 @@
     background-color: black;
 }
 
-a{
+a:link {
     text-decoration: none;
-}
+  }
 
 #canada{
     border-color: white;
     text-align: center;
+}
+
+#ReturnMenuBtn{
+    color:white;
+    font-size: 2rem;
+    font-weight: 200;
+    border:none;
+}
+
+#ReturnMenuBtn:hover{
+    background-color:white;
+    font-size: 2rem;
+    font-weight: 200;
+    color:black;
+    transition: 0.5s;
+    border:none;
 }
 
 p{
