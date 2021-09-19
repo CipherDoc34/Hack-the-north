@@ -1,0 +1,181 @@
+<html>
+<body>
+<p>Question 1</p>
+<p>What is Germany's Capital City? (Select one)</p>
+                                    <input class="form-check-input" type="checkbox" value="" id = 0>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        a. Munich
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 1>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        b. Frankfurt
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 2>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        c. Hamburg
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 3>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        d. Berlin
+                                    </label>
+                                </div>
+								              <script>
+                                    const questionA = [
+                                        [0],
+                                        [1],
+                                        [2],
+                                        [3]
+                                    ];
+                                </script>
+								<p>Question 2</p>
+<p>What is Germany's population? (Select one)</p>
+                                    <input class="form-check-input" type="checkbox" value="" id = 4>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        a. 13,389,496
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 5>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        b. 84,108,395
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 6>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        c. 69
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 7>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        d. 13 billion
+                                    </label>
+                                </div>
+								              <script>
+                                    const questionB = [
+                                        [4],
+                                        [5],
+                                        [6],
+                                        [7]
+                                    ];
+                                </script>
+																<p>Question 3</p>
+<p>What is Germany's National Fruit? (Select one)</p>
+                                    <input class="form-check-input" type="checkbox" value="" id = 8>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        a. Banana
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 9>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        b. Grape
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 10>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        c. Mango
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 11>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        d. Apple
+                                    </label>
+                                </div>
+								              <script>
+                                    const questionC = [
+                                        [8],
+                                        [9],
+                                        [10],
+                                        [11]
+                                    ];
+                                </script>
+																<p>Question 4</p>
+<p>What is Germany's National Animal? (Select one)</p>
+                                    <input class="form-check-input" type="checkbox" value="" id = 12>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        a. Polar Bear
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 13>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        b. Federal Eagle
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 14>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        c. Spider
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 15>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        d. Horse
+                                    </label>
+                                </div>
+								              <script>
+                                    const questionD = [
+                                        [12],
+                                        [13],
+                                        [14],
+                                        [15]
+                                    ];
+                                </script>
+								            <div class="container-fluid pb-3">
+                <button id = "submit" style="border:none;" onclick="checkBox()">submit</button>
+            </div>
+			<div id= "outcome"></div>
+								           <script>
+            
+            let itemSelected = []; 
+            function checkArray(array){
+                for (let i = 0; i < array.length; i++){
+                    if(document.getElementById(array[i]).checked){
+                        itemSelected.push(array[i]);
+                    }
+                    // else
+                    //     delete itemSelected[itemSelected.findIndex(array[i][0])];                                                                               
+                }
+            }
+                                                                                
+            function checkBox(){
+                checkArray(questionA);
+                checkArray(questionB);
+                checkArray(questionC);
+                checkArray(questionD);
+                console.log(`items = ${itemSelected} `);
+                items = itemSelected.join();
+				console.log(itemSelected);
+                    if(items == '3,5,11,13'){
+                        document.getElementById("outcome").innerHTML = "<p>Correct</p>";
+                    } else{
+					document.getElementById("outcome").innerHTML = "<p>Incorrect</p>";
+					}
+					itemSelected = [];
+            }
+            </script>
+</body>
+</html>
